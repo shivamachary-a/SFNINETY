@@ -1,5 +1,5 @@
 import { isMobile } from "react-device-detect";
-import { Grid, Box, VStack, Heading, ChakraProvider, HStack, GridItem, Text } from '@chakra-ui/react';
+import { Grid, Box, VStack, Heading, ChakraProvider, HStack } from '@chakra-ui/react';
 
 function Home() {
     if (!isMobile) {
@@ -30,7 +30,6 @@ function Home() {
 
                         </Grid>
                         <Grid templateColumns="repeat(2, 1fr)" bg="rgba(255,255,255,0.2)">
-
                             <Box p="2em" display="flex" justifyContent="start" alignItems="center" w="100%">
                                 <VStack alignItems="start">
                                     <Heading size="3xl" color="white" style={{ textAlign: "left" }}>
@@ -39,56 +38,6 @@ function Home() {
 
                                 </VStack>
                             </Box>
-                            <Grid templateRows="repeat(2, 1fr)" templateColumns="repeat(2, 1fr)">
-                                <GridItem maxH="30vh" >
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src=" https://cdn.discordapp.com/attachments/692861972731002995/852620831485329438/STONKS.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Invest in stocks, shares and index funds.</Heading>
-                                    </VStack>
-                                </GridItem>
-                                <GridItem maxH="30vh">
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852630049790361620/algo.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Deploy algorithms or write scripts to trade for you.</Heading>
-                                    </VStack>
-                                </GridItem>
-                                <GridItem maxH="30vh">
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852620994761195600/STONKS.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Invest in stocks, shares and index funds.</Heading>
-                                    </VStack>
-                                </GridItem>
-                                <GridItem maxH="30vh">
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852620831485329438/STONKS.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Invest in stocks, shares and index funds.</Heading>
-                                    </VStack>
-                                </GridItem>
-                                <GridItem maxH="30vh" >
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852620994761195600/STONKS.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Invest in stocks, shares and index funds.</Heading>
-                                    </VStack>
-                                </GridItem>
-                                <GridItem maxH="30vh">
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852620994761195600/STONKS.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Invest in stocks, shares and index funds.</Heading>
-                                    </VStack>
-                                </GridItem>
-                                <GridItem maxH="30vh">
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852620994761195600/STONKS.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Invest in stocks, shares and index funds.</Heading>
-                                    </VStack>
-                                </GridItem>
-                                <GridItem maxH="30vh">
-                                    <VStack>
-                                        <img style={{ height: "20vh" }} alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852620994761195600/STONKS.png"></img>
-                                        <Heading fontSize="20" style={{ position: "relative", top: "-5vh", wordWrap: "normal" }}>Invest in stocks, shares and index funds.</Heading>
-                                    </VStack>
-                                </GridItem>
-                            </Grid>
                         </Grid>
                     </VStack>
                 </Box >
