@@ -1,5 +1,5 @@
 import { isMobile } from "react-device-detect";
-import { Grid, Box, VStack, Heading, ChakraProvider, HStack } from '@chakra-ui/react';
+import { Grid, Box, VStack, Heading, ChakraProvider, HStack, Text } from '@chakra-ui/react';
 
 function Home() {
     if (!isMobile) {
@@ -10,12 +10,12 @@ function Home() {
                 >
                     <VStack>
                         <Grid templateColumns="repeat(2, 1fr)">
-                            <Box textAlign="center" fontSize="xl" position="relative" display="flex" justifyContent="center" alignItems="center" h="100vh" w="50vw" maxWidth="50vw">
-                                <VStack>
+                            <Box textAlign="center" fontSize="xl" position="relative" display="flex" justifyContent="center" alignItems="center" h="100%" w="50vw" maxWidth="50vw">
+                                <VStack style={{ overflow: "hidden" }}>
                                     <HStack>
-                                        <img style={{ height: "auto", width: "20vw", position: "relative", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" }} alt="" src="https://i.ibb.co/89dpvVX/Rotato-Snapshot-Black.png"></img>
+                                        <img style={{ height: "auto", width: "40vw", position: "relative", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" }} alt="" src="https://i.ibb.co/89dpvVX/Rotato-Snapshot-Black.png"></img>
 
-                                        <img style={{ height: "auto", width: "20vw", position: "relative", left: "-10vw", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" }} alt="" src="https://i.ibb.co/rHfLZwc/Rotato-Snapshot-White.png"></img>
+                                        <img style={{ height: "auto", width: "40vw", position: "relative", left: "-20vw", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" }} alt="" src="https://i.ibb.co/rHfLZwc/Rotato-Snapshot-White.png"></img>
                                     </HStack>
                                 </VStack>
                             </Box>
@@ -37,6 +37,28 @@ function Home() {
                                     </Heading>
 
                                 </VStack>
+                            </Box>
+                            <Box p="2em" display="flex" justifyContent="center" alignItems="center" w="100%" background="#ffffff" style={{ imageRendering: "crisp-edges" }}>
+
+                                <Grid templateColumns="repeat(2, 1fr)" templateRows="repeat(2, 1fr)" bg="rgba(255,255,255,0.2)" columnGap="10vw" rowGap="10vh" fontWeight="bold">
+                                    <VStack>
+                                        <img alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852982644770078740/Frame_3.png"></img>
+                                        <Text textAlign="center">Earn interest on your savings. All of our investments are ethical, so you can rest assured that the interest you earn is derived from sustainable practices.</Text>
+                                    </VStack>
+                                    <VStack>
+                                        <img alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852982640993632276/Frame_1.png"></img>
+                                        <Text textAlign="center">Invest in stocks, shares, index funds and cryptocurrencies, commission free. Whether you're a pro or just getting started, there's something for you.</Text>
+                                    </VStack>
+                                    <VStack>
+                                        <img alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852982642995888208/Frame_2.png"></img>
+                                        <Text textAlign="center">Choose prewritten algorithms, strategies, and ML models, or write your own and deploy them directly into our systems.</Text>
+                                    </VStack>
+                                    <VStack>
+                                        <img alt="" src="https://cdn.discordapp.com/attachments/692861972731002995/852982646023127061/Frame_4.png"></img>
+                                        <Text textAlign="center">Trade stocks, shares, cryptocurrencies and derivatives with competitive fees and professional grade tools.</Text>
+
+                                    </VStack>
+                                </Grid>
                             </Box>
                         </Grid>
                     </VStack>
