@@ -1,4 +1,4 @@
-import { Box, Button, ChakraProvider, FormControl, FormErrorMessage, FormLabel, Grid, Heading, HStack, Input, VStack } from '@chakra-ui/react';
+import { Box, Button, ChakraProvider, FormControl, FormErrorMessage, FormLabel, Grid, Heading, HStack, Input, VStack, Text } from '@chakra-ui/react';
 import { Formik, Form, Field } from 'formik';
 import { isMobile } from "react-device-detect";
 function Home() {
@@ -27,15 +27,15 @@ function Home() {
                                 </VStack>
                             </Box>
                         </Grid>
-                        <VStack spacing="10px" justifyContent="center" alignItems="start" h="50vh" p={"3em"} background="white" style={{ imageRendering: "crisp-edges" }} w="100vw" minH="500px">
-                            <Heading size="lg" color="black">It takes a lot of effort to invest your money, save, trade, or control your finances properly already - there's a lack of education; the right tools are really expensive, and traditional financial institutions haven't really caught up in terms of technology and sustainability.</Heading>
-                            <Heading size="lg" color="black">We're trying to change that.</Heading>
-                            <Heading size="lg" color="black">Save, invest, trade and spend, without having to ever compromise on your morals.</Heading>
-                            <Heading size="lg" color="black">A carbon neutral bank that lets you earn interest from the ethical and community driven investments we make (and you get a say in), and a complete financial ecosystem surrounding it.</Heading>
-                            <Heading size="3xl" color="black">That's SF90.</Heading>
+                        <VStack spacing="10px" justifyContent="center" alignItems="start" h="100%" p={"2em"} background="white" style={{ imageRendering: "crisp-edges" }} w="100vw" minH="30em" maxH="75vh">
+                            <Text fontSize="1.5vw" color="black">It takes a lot of effort to invest your money, save, trade, or control your finances properly <b>already</b> - there's a lack of education; the right tools are really expensive, and traditional financial institutions haven't really caught up in terms of technology and sustainability.</Text>
+                            <Text fontSize="1.5vw" color="black">We're trying to change that.</Text>
+                            <Text fontSize="1.5vw" color="black">Save, invest, trade and spend, without having to ever compromise on your morals.</Text>
+                            <Text fontSize="1.5vw" color="black">A carbon neutral bank that lets you earn interest from the ethical and community driven investments we make (and you get a say in), and a complete financial ecosystem surrounding it.</Text>
+                            <Heading fontSize="3vw" color="black">That's SF90.</Heading>
                         </VStack>
                         <Box justifyContent="center" alignItems="center" h="100%" p={"3em"} background="linear-gradient(90deg, rgba(55,11,194,0.6) 0%, rgba(9,43,254,0.8) 100%);" style={{ imageRendering: "crisp-edges" }} w="100vw" overflow="visible">
-                            <Heading size="lg" color="white">Want to know more?</Heading>
+                            <Heading size="lg" mb={"1em"} color="white">Subscribe to our mailing list to be the first to know when we launch</Heading>
                             <FormikExample />
 
                         </Box>
@@ -100,6 +100,18 @@ function Home() {
                                 </Heading>
 
                             </VStack>
+                        </Box>
+                        <VStack spacing="10px" justifyContent="center" alignItems="start" h="100vh" p={"1em"} background="white" style={{ imageRendering: "crisp-edges" }} w="100vw" minH="100vh">
+                            <Text fontSize="4vw" color="black">It takes a lot of effort to invest your money, save, trade, or control your finances properly <b>already</b> - there's a lack of education; the right tools are really expensive, and traditional financial institutions haven't really caught up in terms of technology and sustainability.</Text>
+                            <Text fontSize="4vw" color="black">We're trying to change that.</Text>
+                            <Text fontSize="4vw" color="black">Save, invest, trade and spend, without having to ever compromise on your morals.</Text>
+                            <Text fontSize="4vw" color="black">A carbon neutral bank that lets you earn interest from the ethical and community driven investments we make (and you get a say in), and a complete financial ecosystem surrounding it.</Text>
+                            <Heading fontSize="4xl" color="black">That's SF90.</Heading>
+                        </VStack>
+                        <Box justifyContent="center" alignItems="center" h="100%" p={"3em"} background="linear-gradient(90deg, rgba(55,11,194,0.6) 0%, rgba(9,43,254,0.8) 100%);" style={{ imageRendering: "crisp-edges" }} w="100vw" overflow="visible">
+                            <Heading size="lg" mb={"1em"} color="white">Subscribe to our mailing list to be the first to know when we launch</Heading>
+                            <FormikExample />
+
                         </Box>
 
                     </VStack>
