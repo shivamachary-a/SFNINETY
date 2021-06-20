@@ -1,6 +1,8 @@
 import { Box, Button, ChakraProvider, FormControl, FormErrorMessage, FormLabel, Grid, Heading, HStack, Input, VStack, Text } from '@chakra-ui/react';
 import { Formik, Form, Field } from 'formik';
 import { isMobile } from "react-device-detect";
+import dark from './images/dark.png'
+import light from './images/light.png'
 function Home() {
     if (!isMobile) {
         return (
@@ -13,8 +15,8 @@ function Home() {
                             <Box textAlign="center" fontSize="xl" position="relative" display="flex" justifyContent="center" alignItems="center" h="100%" w="50vw" maxWidth="50vw">
                                 <VStack style={{ overflow: "hidden" }}>
                                     <HStack overflow="hidden">
-                                        <img style={{ height: "auto", width: "40vw", position: "relative", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );", }} alt="" src="https://i.ibb.co/89dpvVX/Rotato-Snapshot-Black.png"></img>
-                                        <img style={{ height: "auto", width: "40vw", position: "relative", left: "-20vw", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" }} alt="" src="https://i.ibb.co/rHfLZwc/Rotato-Snapshot-White.png"></img>
+                                        <img style={{ height: "auto", width: "40vw", position: "relative", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );", }} alt="" src={dark}></img>
+                                        <img style={{ height: "auto", width: "40vw", position: "relative", left: "-20vw", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" }} alt="" src={light}></img>
                                     </HStack>
                                 </VStack>
                             </Box>
@@ -80,16 +82,17 @@ function Home() {
                         <Box textAlign="center" fontSize="xl" position="relative" display="flex" justifyContent="center" alignItems="center" h="100vh" maxWidth="100vw" overflow="hidden">
                             <VStack>
                                 <HStack>
-                                    <img style={{ height: "auto", width: "100vw", position: "relative", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );" }} alt="" src="https://i.ibb.co/89dpvVX/Rotato-Snapshot-Black.png"></img>
+                                    <img style={{ height: "auto", width: "100vw", position: "relative", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );", imageRendering:"crisp-edges"}} alt="" src={light}></img>
 
                                     <img style={{
                                         height: "auto",
                                         width: "100vw",
                                         maxWidth: "100vw",
                                         position: "relative",
+                                        imageRendering:"-moz-crisp-edges",
                                         left: "-60vw", boxShadow: "box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
 
-                                    }} alt="" src="https://i.ibb.co/rHfLZwc/Rotato-Snapshot-White.png"></img>
+                                    }} alt="" src={dark}></img>
                                 </HStack>
                             </VStack>
                         </Box>
