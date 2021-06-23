@@ -1,5 +1,6 @@
 import { Box, Button, ChakraProvider, FormControl, FormErrorMessage, FormLabel, Grid, Heading, HStack, Input, VStack, Text } from '@chakra-ui/react';
 import { Formik, Form, Field } from 'formik';
+import { useState } from 'react';
 import { isMobile } from "react-device-detect";
 import dark from './images/dark.png'
 import light from './images/light.png'
@@ -22,7 +23,7 @@ function Home() {
                             </Box>
                             <Box p="2em" display="flex" justifyContent="start" alignItems="center" w="100%">
                                 <VStack alignItems="start">
-                                    <Heading size="3xl" color="white" style={{ textAlign: "left" }}>
+                                    <Heading fontSize="5vh" color="white" style={{ textAlign: "left" }}>
                                         Meet SF90, the UK's first complete financial ecosystem built from the ground up with a focus on sustainability, ethics and community.
                                     </Heading>
 
@@ -126,10 +127,13 @@ function Home() {
     }
 }
 const FormikExample = () => {
+    const [message, setMessage] = useState("")
     function validateName(value) {
       let error
       if (!value) {
         error = "Email is required"
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+          error = "Invalid email"
       } 
       return error
     }
@@ -138,13 +142,19 @@ const FormikExample = () => {
       <Formik
         initialValues={{ email: "" }}
         onSubmit={async (values, actions) => {
-          await fetch("https://2pff26hyr4.execute-api.eu-west-2.amazonaws.com/email", {
+          const res = await fetch("https://2pff26hyr4.execute-api.eu-west-2.amazonaws.com/email", {
               method: "POST",
               mode: "no-cors",
               body: JSON.stringify({
                   email: values.email
               })
           })
+          if (!res.ok) {
+              console.log(res)
+              setMessage("Sorry, this didn't work. Try again later.")
+          } else {
+              setMessage("Talk to you soon!")
+          }
 
         }}
       >
@@ -169,6 +179,7 @@ const FormikExample = () => {
             >
               Submit
             </Button>
+            <Text color="white">{message}</Text>
           </Form>
         )}
       </Formik>
